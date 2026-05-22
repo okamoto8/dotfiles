@@ -21,13 +21,13 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ##### git profile switch #####
 function gitmain() {
-  git config --global user.name "okamoto8"
-  git config --global user.email "ddi_00027@dk.daihatsu.co.jp"
+  git config --global user.name "{{ .git_username_main }}"
+  git config --global user.email "{{ .git_email_main }}"
 }
 
 function gitsub() {
-  git config --global user.name "Turks08"
-  git config --global user.email "turks7myhero@gmail.com"
+  git config --global user.name "{{ .git_username_sub }}"
+  git config --global user.email "{{ .git_email_sub }}"
 }
 
 ##### Flutter #####

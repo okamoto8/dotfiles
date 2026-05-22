@@ -1,8 +1,8 @@
 [user]
-	name = Okamoto Mahiro
-	email = ddi_00027@dk.daihatsu.co.jp
+	name = {{ .git_name }}
+	email = {{ .git_email_main }}
 [core]
-	excludesfile = /Users/m_okamoto/.gitignore_global
+	excludesfile = /Users/{{ .home_username }}/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -10,7 +10,7 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/m_okamoto/.stCommitMsg
+	template = /Users/{{ .home_username }}/.stCommitMsg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
